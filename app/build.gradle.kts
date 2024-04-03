@@ -45,7 +45,7 @@ android {
             buildConfigField(
                 type = "String",
                 name = "BASE_URL",
-                value = "\"https://animechan.xyz/api\""
+                value = "\"https://animechan.xyz/api/\""
             )
         }
 
@@ -53,7 +53,7 @@ android {
             buildConfigField(
                 type = "String",
                 name = "BASE_URL",
-                value = "\"https://animechan.xyz/api\""
+                value = "\"https://animechan.xyz/api/\""
             )
         }
     }

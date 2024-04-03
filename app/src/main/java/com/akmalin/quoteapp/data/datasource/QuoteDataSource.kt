@@ -6,8 +6,9 @@ import com.akmalin.quoteapp.data.source.network.services.QuoteApiServices
 interface QuoteDataSource {
     suspend fun getRandomQuotes(): List<QuoteResponse>
 }
-    class  QuoteApiDataSource(private val services: QuoteApiServices) : QuoteDataSource{
-        override suspend fun getRandomQuotes(): List<QuoteResponse> {
-            return services.getRandomQuotes()
-        }
+
+class QuoteApiDataSource(private val service: QuoteApiServices) : QuoteDataSource {
+    override suspend fun getRandomQuotes(): List<QuoteResponse> {
+        return service.getRandomQuotes().take(10)
+    }
 }
